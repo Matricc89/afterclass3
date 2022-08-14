@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header*/
+.header {
+    background-color: #57b2e7;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+}
+
+.header img {
+    width: 250px;
+    padding: 10px;
+}
+
+.header ul {
+    list-style: none;
+    display: flex;
+}
+
+.header li,
+.footer li {
+    padding: 10px;
+}
+
+.header a,
+.footer a {
+    color: #d15b3b;
+
+    font-weight: bold;
+}
+
+
+/*Main -index*/
+.main-index,
+.main-productos,
+.main-faq,
+.main-contacto,
+.main-galeria {
+    /* Vieport measures */
+    padding-top: 200px;
+    min-height: 100vh;
+    background-color: #e87a5d;
+    color: white;
+}
+.main-index div img{
+    height: 350px;
+    width: 370px;
+    padding-top: 10px;
+}
+
+.main-index div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center
+}
+.main-index div h1{
+    text-decoration: underline;
+    font-weight: bold;
+    padding: 5px;
+}
+.main-index div h2 {
+    padding: 25px;
+}
+
+.main-index div p {
+    padding: 5px;
+    margin: 10px;
+}
+/* GALERIA */
+
+.grid-container {
+
+    max-width: 850px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+}
+
+.grid-container img {
+    width: 250px;
+}
+
+/* Contacto*/
+.form1 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
+
+
+}
+
+.form1 label {
+    text-decoration: underline;
+    font-size: 25px;
+}
+
+.enviar {
+    background-color: rgb(22, 22, 187);
+    color: rgb(209, 219, 228);
+    padding: 5px;
+    border-color: rgb(194, 194, 231);
+
+}
+
+/* Footer */
+.footer {
+    background-color: #f3b941;
+}
+
+.footer ul {
+    list-style: none;
+    display: flex;
+    width: 450px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+@media (max-width: 740px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .footer ul {
+        width: 266px;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        justify-items: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 525px) {
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(9, 1fr);
+    }
+}
